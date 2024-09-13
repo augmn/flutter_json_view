@@ -39,6 +39,11 @@ class PrimitiveBuilder extends StatelessWidget {
         jsonObj: jsonObj,
         textStyle: _jsonViewTheme.boolStyle,
       );
+    } else if (jsonObj == null) {
+      return PrimitiveJsonItem(
+        jsonObj: jsonObj,
+        textStyle: _jsonViewTheme.boolStyle,
+      );
     }
     return _jsonViewTheme.errorBuilder?.call(context, jsonObj) ??
         const Text('error');
